@@ -41,13 +41,13 @@ xUnit / MSTest (opcional)	Suporte a testes unitários
 4. Arquitetura da Solução
 
 A solução está organizada em camadas para facilitar manutenção, testes e evolução:
-
+```txt
 Be3.Health.sln
 ├── Be3.Health.Api/          # Camada de apresentação (Web API)
 ├── Be3.Health.Application/  # Casos de uso, serviços de aplicação, DTOs
 ├── Be3.Health.Domain/       # Entidades de domínio e regras de negócio
 └── Be3.Health.Infra/        # Acesso a dados, EF Core, repositórios, contexto
-
+```
 Princípios aplicados
 
 Separação de responsabilidades por camada
@@ -62,7 +62,9 @@ Organização compatível com ambientes corporativos de médio e grande porte
 
 5. Como Executar em Ambiente de Desenvolvimento
 1. Restaurar dependências
+```txt
 dotnet restore
+```
 
 2. Compilar a solução
 dotnet build
@@ -77,8 +79,9 @@ dotnet ef database update
 Certifique-se de executar o comando na pasta do projeto que contém o DbContext (geralmente Be3.Health.Infra ou similar), ou ajuste o --project e --startup-project conforme necessário.
 
 4. Executar a API
+```txt
 dotnet run --project Be3.Health.Api
-
+```
 
 A API ficará disponível em URLs semelhantes a:
 
@@ -91,11 +94,11 @@ http://localhost:5000
 6. Configuração de Ambiente
 
 As configurações de ambiente ficam concentradas nos arquivos:
-
+```txt
 Be3.Health.Api/
 └── appsettings.json
     appsettings.Development.json
-
+```
 Exemplos de configurações comuns
 String de conexão
 "ConnectionStrings": {
@@ -116,13 +119,13 @@ Em contexto de avaliação técnica, é comum manter credenciais genéricas ou u
 7. Endpoints Principais
 
 A API expõe endpoints voltados ao domínio de Pacientes (ajuste conforme sua implementação):
-
+```txt
 GET    /api/pacientes           # Lista pacientes
 GET    /api/pacientes/{id}      # Detalhe de um paciente
 POST   /api/pacientes           # Criação de paciente
 PUT    /api/pacientes/{id}      # Atualização de paciente
 DELETE /api/pacientes/{id}      # Exclusão de paciente
-
+```
 
 Esses endpoints são consumidos diretamente pelo frontend Angular no módulo Be3 Pacientes.
 
