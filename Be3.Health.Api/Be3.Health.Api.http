@@ -1,0 +1,6 @@
+@Be3.Health.Api_HostAddress = http://localhost:5077
+
+GET {{Be3.Health.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

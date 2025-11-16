@@ -1,0 +1,31 @@
+# Build
+bin/
+obj/
+[Bb]uild/
+[Ll]ogs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio
+.vs/
+*.psess
+*.vsp
+*.vspx
+
+# Rider
+.idea/
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# ASP.NET logs
+**/logs/
+
+# Configs locais
+appsettings.Development.json
+appsettings.Local.json
